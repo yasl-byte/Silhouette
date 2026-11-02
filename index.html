@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0e1117">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<title>Silhouette</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app" aria-live="polite"></main>
+
+<div id="rest" class="rest" hidden role="timer" aria-label="Minuteur de repos">
+  <span class="rt" id="restTime">1:30</span>
+  <span class="grow small mut">Repos</span>
+  <button data-a="restminus" aria-label="Moins quinze secondes">−15</button>
+  <button data-a="restplus" aria-label="Plus quinze secondes">+15</button>
+  <button data-a="restskip">Passer</button>
+</div>
+
+<nav id="nav" aria-label="Navigation principale">
+  <button data-a="nav" data-v="day">Jour</button>
+  <button data-a="nav" data-v="cal">Calendrier</button>
+  <button data-a="nav" data-v="smoke">Tabac</button>
+  <button data-a="nav" data-v="stats">Progrès</button>
+  <button data-a="nav" data-v="set">Réglages</button>
+</nav>
+
+<div id="modal" class="modal" hidden></div>
+<div id="toast" class="toast" hidden></div>
+
+<script src="data.js"></script>
+<script src="core.js"></script>
+<script src="net.js"></script>
+<script src="views.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
